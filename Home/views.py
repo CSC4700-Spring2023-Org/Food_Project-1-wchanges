@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 #importing the models
+from django.shortcuts import render
 from .models import MenuCategory, MenuItem ,ClientReview,RestaurantInfo,ComingSoon,AboutInfo
 
 import urllib.parse
@@ -54,7 +55,7 @@ def home(request):
 
 
     # render the home page
-    return render(request, 'index.html', {'categories': categories, 'items': items,'cart':cart,'cart_total':cart_total,'cart_nbr':cart_nbr,'reviews':reviews,'restaurant':restaurant,'coming_soon':coming_soon,'about':about})
+    return render(request, 'base.html', {'categories': categories, 'items': items,'cart':cart,'cart_total':cart_total,'cart_nbr':cart_nbr,'reviews':reviews,'restaurant':restaurant,'coming_soon':coming_soon,'about':about})
 
 
 
